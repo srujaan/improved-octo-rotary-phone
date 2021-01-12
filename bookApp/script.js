@@ -23,3 +23,17 @@ function addToLibrary(newBook) {
 function removeFromLibrary(bookTitle) {
     myLibrary = myLibrary.filter((book) => book.title !== bookTitle);
 }
+
+// get book from the library
+function getBook(bookTitle) {
+    for (let book of myLibrary) {
+        if (book.title === bookTitle) {
+            return book;
+        }
+    }
+    return null;
+}
+
+let newBook = new Book('Origin', 'dan brown', 435, true);
+console.log(addToLibrary(newBook));
+console.log(getBook('Origin'));
