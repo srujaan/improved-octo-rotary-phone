@@ -1,14 +1,25 @@
-// Array to store book objects
+"use strict"
+
+// Book constructor function
+function Book(title, author, pages='0', isRead='false') {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.isRead = isRead;
+}
+
+// Books array
 
 let myLibrary = [];
 
-// Book constructor
-function Book(author, title, genre, pages) {
-    this.author = author;
-    this.title = title;
-    this.genre = genre;
-    this.pages = pages;
+function addToLibrary(newBook) {
+    if ( myLibrary.some( (book)=> book.title === newBook.title) ) return false;
+    myLibrary.push(newBook);
+    return true;
 }
 
 
-
+let ew = new Book('ew','ewr', 342, true);
+console.log(addToLibrary('ewre'));
+console.log(addToLibrary('ewre'));
+console.log(myLibrary);
