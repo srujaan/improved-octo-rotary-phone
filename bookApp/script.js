@@ -19,7 +19,7 @@ function addToLibrary(newBook) {
 }
 
 
-let ew = new Book('ew','ewr', 342, true);
-console.log(addToLibrary('ewre'));
-console.log(addToLibrary('ewre'));
-console.log(myLibrary);
+//remove from library
+function removeFromLibrary(bookTitle) {
+    myLibrary = myLibrary.filter((book) => book.title !== bookTitle);
+}
